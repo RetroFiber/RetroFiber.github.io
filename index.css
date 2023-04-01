@@ -94,6 +94,26 @@
       color: inherit; 
       width: 100%;
   }
+  .rf {
+      color: rgba(128, 255, 128, 0.8);
+      text-decoration: none;
+    }
+
+  .rf::before {
+    content: "";
+  }
+
+  .rf::after {
+    content: "";
+  }
+  
+  .rf:hover:before {
+    content: "> ";
+  }
+
+  .rf:hover:after {
+    content: " <";
+  }
   p2{
     float: left;
   }
