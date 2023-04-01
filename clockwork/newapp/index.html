@@ -85,6 +85,26 @@
   a:hover:after {
     content: "]<<";
   }
+  .rf {
+    color: rgba(128, 255, 128, 0.8);
+    text-decoration: none;
+  }
+
+  .rf::before {
+    content: "";
+  }
+
+  .rf::after {
+    content: "";
+  }
+  
+  .rf:hover:before {
+    content: "> ";
+  }
+
+  .rf:hover:after {
+    content: " <";
+  }
   button {
     color: rgba(128, 255, 128, 0.8);
     text-decoration: none;
@@ -166,14 +186,14 @@
 }
   </style>
   <body>
-	<h1>RetroFiber</h1>
+	<h1><a class="rf" href="https://retrofiber.github.io">RetroFiber</a></h1>
 	<p> </p>
 	<div class="center-margin">
 		<p id="uv-error"></p>
 		<pre id="uv-error-code"></pre>
 	</div>
   <h1>Newapp</h1>
-  <h2>Fill out info in the text boxes. Then when done press download. Then upload the downloaded file to the github respitory you used in the text box.</h2>
+  <h2>Fill out info in the popup boxes. Then when done press download. Then upload the downloaded file to the github respitory you used for the popups.</h2>
     <div id="uv-address">
       <input type="text" placeholder="Filename(include extention)" style="text-align:center" id="name"><br>
       <input type="text" placeholder="Site url(include https://)" style="text-align:center" id="site"><br>
