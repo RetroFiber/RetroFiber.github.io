@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <title>RetroFiber</title>
+    <link rel="icon" type="image/png" href="../favicon.png?">
+  </head>
+  <style>
+  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+  html {
+    background: black;
+    min-height: 100%;
+  }
+
+  body {
+    height: 100vh;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(128, 255, 128, 0.8);
+    font: 2.25vh Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    text-align: center;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  pre {
+    margin: 0;
+  }
+
+  .terminal {
+    box-sizing: inherit;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .output {
+    color: rgba(128, 255, 128, 0.8);
+    text-shadow:
+        0 0 1px rgba(51, 255, 51, 0.4),
+        0 0 2px rgba(255, 255, 255, 0.8);
+  }
+  /*
+  .input {
+    color: rgba(192, 255, 192, 0.8);
+    text-shadow:
+        0 0 1px rgba(51, 255, 51, 0.4),
+        0 0 2px rgba(255, 255, 255, 0.8);
+  }
+  .input::before {
+    content: "$ ";
+  }
+  */
+
+  a {
+    color: rgba(128, 255, 128, 0.8);
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "  [";
+  }
+
+  a::after {
+    content: "]  ";
+  }
+  
+  a:hover:before {
+    content: ">>[";
+  }
+
+  a:hover:after {
+    content: "]<<";
+  }
+  button {
+    color: rgba(128, 255, 128, 0.8);
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    width: 300%;
+  }
+
+  button::before {
+    content: "[";
+  }
+
+  button::after {
+    content: "]";
+  }
+  
+  button:hover:before {
+    content: ">>[";
+  }
+
+  button:hover:after {
+    content: "]<<";
+  }
+
+  .errorcode {
+    color: white;
+  }
+  input {
+    width: 300%;
+  }
+  #uv-address {
+      float: left;
+      margin: 10;
+      font: inherit;
+      font-size: 3.75vh;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      color: inherit; 
+  }
+  #name {
+  	  float: left;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      color: inherit; 
+  }
+  #site {
+  	  float: left;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      color: inherit; 
+  }
+  #gu {
+  	  float: left;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      color: inherit; 
+  }
+  #gr {
+  	  float: left;
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      color: inherit; 
+  }
+  p2{
+    float: left;
+  }
+  ::placeholder {
+  color: rgba(128, 255, 128, 0.8);
+  text-align: center;
+  }
+  input:focus::placeholder {
+  color: transparent;
+}
+  </style>
+  <body>
+	<h1>RetroFiber</h1>
+	<p> </p>
+	<div class="center-margin">
+		<p id="uv-error"></p>
+		<pre id="uv-error-code"></pre>
+	</div>
+  <h1>Newapp</h1>
+  <h2>Fill out info in the popup boxes. Then when done press download. Then upload the downloaded file to the github respitory you used for the popups.</h2>
+    <div id="uv-address">
+      <input type="text" placeholder="Filename(include extention)" style="text-align:center" id="name"><br>
+      <input type="text" placeholder="Site url(include https://)" style="text-align:center" id="site"><br>
+      <input type="text" placeholder="Github username(replace spaces with -)" style="text-align:center" id="gu"><br>
+      <input type="text" placeholder="Github respitory name(replace spaces with -)" style="text-align:center" id="gr"><br>
+      <button id="enter" onclick="dwnl()">Download</button>
+    </div>
+
+  <script>
+  	function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+
+      element.style.display = 'none';
+      document.body.appendChild(element);
+
+      element.click();
+
+      document.body.removeChild(element);
+    }
+
+    // Start file download.
+    function dwnl() {
+      let name = document.getElementById('name').value;
+      let site = document.getElementById('site').value;
+      let gu = document.getElementById('gu').value;
+      let gr = document.getElementById('gr').value;
+      download(name,`function start() {
+
+    ////MADE FOR VERSION 0.12.0 SCRIPT SYSTEM////
+    ////CONFIG////
+    var link = "${site}"; // link to app webpage
+    var id = "https://${gu}.github.io/${gr}/${name}"; // set this to the url location of your script
+
+    ////SCRIPT////
+
+    var ExampleLink = document.createElement("a");
+    var ExampleIFrame = document.createElement("iframe");
+
+    ExampleIFrame.style = "display: none;";
+    ExampleIFrame.className = "app "+id;
+    ExampleIFrame.id = id;
+    ExampleIFrame.src = "about:blank";
+
+    ExampleLink.href = "javascript:openapp('"+ ExampleIFrame.id +"','" + link + "');" ;
+    ExampleLink.innerHTML = "<img src=\\"https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + link + "&size=16\\"width=\\"16px\\" height=\\"16px\\">";  
+    ExampleLink.className = id; 
+    ExampleLink.addEventListener('dblclick', (e) => {
+      uninstallApp(ExampleIFrame.id);
+    });
+
+    document.getElementById("navbar").appendChild(ExampleLink);
+    document.getElementById("main").appendChild(ExampleIFrame);
+  }
+  start();`);
+  }
+  </script>
+</html>
