@@ -1,126 +1,239 @@
-  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: #63de00;
+}
 
-  html {
-    background: black;
-    min-height: 100%;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{
+    color: orange;
   }
+  10%{
+    color: purple;
+  }
+  20%{
+    color: red;
+  }
+  30%{
+    color: CadetBlue;
+  }
+  40%{
+    color: yellow;
+  }
+  50%{
+    color: coral;
+  }
+  60%{
+    color: green;
+  }
+  70%{
+    color: cyan;
+  }
+  80%{
+    color: DeepPink;
+  }
+  90%{
+    color: DodgerBlue;
+  }
+  100%{
+    color: orange;
+  }
+}
+a:focus, a:hover{
+  outline: none;
+  border: 1px dashed deepskyblue;
+  color: #fff;
+}
+::selection {
+  background-color: rgba(99, 222, 0,0.3);
+  color: white;
+}
+* {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+ul,ol{
+  padding-left: 22px;
+}
+td{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+select{
+  background: none;
+  border: 1px dashed #63de00;
+  color: #63de00;
+  padding: 4px;
+  margin: 3px;
+}
+select:focus, select:hover {
+  outline: none;
+  border: 1px dashed deepskyblue;
+}
+optgroup{
+  font-weight: 600;
+  background: #000;
+}
+option {
+  background: #000;
+}
+input{
+  background: none;
+  border: 1px dashed #63de00;
+  color: #63de00;
+  padding: 4px;
+  margin: 3px;
+}
+button{
+  background: none;
+  border: 1px dashed #63de00;
+  color: #63de00;
+  padding: 4px;
+  margin: 3px;
+}
+button, .btn{
+  text-decoration: none;
+  padding: 4px 15px;
+  background: none;
+  border: 1px dashed #63de00;
+  color: #63de00;
+  font-weight: 500;
+}
+input:focus, input:hover {
+  outline: none;
+  border: 1px dashed deepskyblue;
+}
+button:focus, button:hover, .btn:focus, .btn:hover{
+  outline: none;
+  background: deepskyblue;
+  border: 1px dashed deepskyblue;
+  color: #fff;
+  background-color: rgba(99, 222, 0,0.3) 
+}
+input::-webkit-input-placeholder {
+}
+input:-ms-input-placeholder {
+}
+input::placeholder {
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: 1px dashed #63de00;
+  -webkit-text-fill-color: #63de00;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.console {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.console .consolebody {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  overflow: none;
+  background-color: #000;
+  color: #63de00;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: #63de00;
+  line-height: 1.5rem;
+  border: 1px dashed #63de00;
+  padding: 0px 8px;
+  margin: 3px 0px;
+}
+a:hover{
+  background-color: rgba(99, 222, 0,0.3) 
+}
+code {
 
-  body {
-    height: 100vh;
-    margin: 10px;
-    padding: 10px;
-    color: rgba(128, 255, 128, 0.8);
-    font: 2.25vh Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    text-align: center;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-    }
+  line-height: 1rem;
+}
+p {
+  line-height: 1rem;
+}
+hr{
+  border: 1px dashed #63de00;
+  border-bottom: none;
+}
+.msg{
+  margin-top:20px;
+  border: 1px dashed #63de00;
+  padding-top: 0px;
+  padding: 0px 15px;
+}
+.table {
+  border-collapse: collapse;
+  border-bottom: 1px dashed #63de00;
+}
+.table tr{
+  border-top: 1px dashed #63de00;
+  border-right: 1px dashed #63de00;
+}
+.table th {
+  padding: 8px 5px;
+  text-transform: uppercase;
+  border-left: 1px dashed #63de00;
+}
+.table td {
+  padding: 5px 5px;
+  border-left: 1px dashed #63de00;
+}
+.table td a{
+  margin: 0px;
+}
+.groupdata{
+  font-weight: 800;
+}
+.rgb {
+  -webkit-animation: rainbow 8s infinite;
+  -ms-animation: rainbow 8s infinite;
+  animation: rainbow 8s infinite;
+}
+.rgb2 {
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  animation: rainbow2 5s ease infinite;
+}
+@keyframes rainbow2 {
+  0%{
+    background-position:0% 50%
   }
-  ::selection {
-    background: #0080FF;
-    text-shadow: none;
+  50%{
+    background-position:100% 25%
   }
-  pre {
-    margin: 0;
+  100%{
+    background-position:0% 50%
   }
-
-  .terminal {
-    box-sizing: inherit;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-
-  .output {
-    color: rgba(128, 255, 128, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
-  }
-  /*
-  .input {
-    color: rgba(192, 255, 192, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
-  }
-  .input::before {
-    content: "$ ";
-  }
-  */
-
-  a {
-    color: rgba(128, 255, 128, 0.8);
-    text-decoration: none;
-  }
-
-  a::before {
-    content: "[";
-  }
-
-  a::after {
-    content: "]";
-  }
-  
-  a:hover:before {
-    content: ">>[";
-  }
-
-  a:hover:after {
-    content: "]<<";
-  }
-
-  .errorcode {
-    color: white;
-  }
-  #uv-address {
-      float: right;
-      margin: 10;
-      font: inherit;
-      font-size: 3.75vh;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      color: inherit; 
-      width: 100%;
-  }
-  .rf {
-      color: rgba(128, 255, 128, 0.8);
-      text-decoration: none;
-    }
-
-  .rf::before {
-    content: "";
-  }
-
-  .rf::after {
-    content: "";
-  }
-  
-  .rf:hover:before {
-    content: "> ";
-  }
-
-  .rf:hover:after {
-    content: " <";
-  }
-  p2{
-    float: left;
-  }
-  ::placeholder {
-  color: rgba(128, 255, 128, 0.8);
+}
+.btn-right{
+  font-size: 13px;
+  float: right;
+}
+.inline-btn{
+  border: 1px dashed #63de00;
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  display:inline-block;
+}
+.copy{
   text-align: center;
-  }
-  input:focus::placeholder {
-  color: transparent;
+  padding-bottom: 15px;
 }
