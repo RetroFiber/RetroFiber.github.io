@@ -41,6 +41,10 @@ body {
   font-size: 24px;
 }
 
+.navbar .extra {
+  order: 99999;
+}
+
 .navbar a {
   background-color: red;
   color: black;
