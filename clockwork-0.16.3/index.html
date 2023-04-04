@@ -4,8 +4,8 @@
   <head>
     <title>Clockwork, by Redstone Network</title>
     <link rel="shortcut icon" type="image/png" href="clockwork-icon.png">
-    <link href="https://redstone-nw.netlify.app/clockwork-app/clockstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
-    <link href="https://redstone-nw.netlify.app/clockwork-app/appstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
+    <link href="clockstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
+    <link href="appstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" class="donotremove-ss"/>
   </head>
   <body onload="startLoop()" style="display:none;">
@@ -115,8 +115,11 @@
 
       <div style="display: none;" class="app" id="settings-apps">
         <span class="confont">
-          <b>MANAGE APPS - <a class="consolea" href="javascript:openapp('settings','');">BACK</a></b><br>
+          <b>MANAGE APPS - <a class="consolea" href="javascript:openapp('settings','');">BACK</a></b>
+          <br>
           <span class="confont" id="applist"></span>
+          <a class="consolea" href="javascript:addTheme(null);">[INSTALL CUSTOM THEME]</a><br>
+          <a class="consolea" href="javascript:installApp(null);">[INSTALL CUSTOM APP]</a><br>
         </span>
       </div>
       
@@ -146,6 +149,6 @@
       </div>
     </div>
     
-    <script src="https://redstone-nw.netlify.app/clockwork-app/clockwork.js"></script>
+    <script src="clockwork.js"></script>
   </body>
 </html>
