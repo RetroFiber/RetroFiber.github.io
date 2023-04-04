@@ -1,4 +1,4 @@
-alert(localStorage.getItem("theme"));
+localStorage.getItem("theme");
 if (localStorage.getItem("theme") == null) {
   localStorage.setItem("theme", "https://redstone-nw.netlify.app/clockwork-app/clockstyle.css")
   localStorage.setItem("facReset", "false");
