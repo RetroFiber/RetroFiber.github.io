@@ -16,6 +16,12 @@ body {
   margin-bottom: 34px;
 }
 
+.navbar .extra {
+  order: 99999; 
+  border: 1px dashed #63de00; 
+  padding: 1px 4px;
+}
+
 .navbar {
   background-color: black;
   position: fixed;
