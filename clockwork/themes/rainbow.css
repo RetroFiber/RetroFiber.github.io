@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  background-color: black;
+}
+
+@-webkit-keyframes rainbow{
+  0%{
+    color: purple;
+  }
+  20%{
+    color: red;
+  }
+  40%{
+    color: yellow;
+  }
+  60%{
+    color: green;
+  }
+  80%{
+    color: blue;
+  }
+  100%{
+    color: purple;
+  }
+}
+
+body {
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  margin: 0;
+  background-color: black;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.main {
+  padding: 3px;
+  margin-bottom: 34px;
+}
+
+.navbar .extra {
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  order: 99999; 
+  border: 1px dashed; 
+  padding: 1px 4px;
+}
+
+.navbar {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0px;
+  display: block;
+  height: 34px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.navbar span {
+  background-color: black;
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  text-decoration: none;
+  padding: 0 4px;
+  margin-right: 6px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 24px;
+}
+
+.navbar a {
+  background-color: black;
+  text-decoration: none;
+  padding: 1px 4px;
+  margin-right: 6px;
+  font-size: 24px;
+  height: 30px;
+  white-space: nowrap;
+  display: inline;
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  border: 1px dashed;
+}
+a {
+  background-color: black;
+  text-decoration: none;
+  padding: 1px 4px;
+  margin-right: 6px;
+  height: 34px;
+  white-space: nowrap;
+  display: inline;
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  border: 1px dashed;
+}
+
+.navbar a:focus, a:hover{
+  outline: none;
+  border: 1px dashed;
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+}
+
+.consolea {
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  text-decoration: underline;
+}
+.consolea:hover {
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+  text-decoration: underline;
+}
+
+.app {
+  width: 100%;
+  height: calc(100vh - 36px);
+  border: none;
+}
+
+.iconbtn {
+  width: 4px;
+  text-indent: -4px;
+}
+
+.material-symbols-outlined {
+  -webkit-animation: rainbow 20s infinite;
+  -ms-animation: rainbow 20s infinite;
+  animation: rainbow 20s infinite;
+}
+
+.confont {
+  font-family: Courier, Monospace, monospace;
+}
