@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html style="color:white">
   <head>
@@ -7,18 +6,18 @@
     <link id="maincss" rel="stylesheet" href="/index.css">
     <link rel="icon" type="image/png" href="favicon.png?">
   </head>
+  <body>
   <div class="console">
   <div class="consolebody">
     <code>
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script>
-        $(function() {
-          $("#includeHtml").load("https://retrofiber.github.io/header.html");
-        });
-      </script>
-      <div id="includeHtml"></div>
+   <script>
+      $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/header.html");
+      });
+   </script>
+   <div id="includeHtml"></div>
       <p style="text-align: center;">
-        
       </p>
       <h1>RetroFiber</h1>
       <h3>My Projects</h3>
@@ -27,6 +26,7 @@
         <li><a href="/retroprox">RetroProx</a></li>
         <li><a href="/file-host">FileHost</a></li>
         <li><a href="/clockwork/newapp">AppMaker</a></li>
+        <li><a href="javascript:addTheme(null);">Theme</a></li>
         <li><a href="/proxies">Proxies</a></li>
       </ol>
       <hr>
@@ -37,4 +37,5 @@
     </code>
   </div>
 </div>
+  </body>
 </html>
