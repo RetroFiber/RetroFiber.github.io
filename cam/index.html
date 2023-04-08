@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="color:white">
+  <head>
+    <title>RetroFiber</title>
+    <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+    <link id="maincss" rel="stylesheet" href="/index.css">
+    <link rel="icon" type="image/png" href="favicon.png?">
+  </head>
+  <body>
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/header.html");
+      });
+   </script>
+   <div id="includeHtml"></div>
+      <p style="text-align: center;">
+      </p>
+      <h1>RetroFiber</h1>
+      <h3>Camera</h3>
+<div class="panel">
+  <p>Front<input type="checkbox" class="switch">Back
+  <button id="snapBtn">Snap</button>
+</div>
+    </code>
+  </div>
+</div>
+    <script src="script.js"></script>
+  <video id="cam" frameborder="0" border="0" cellspacing="0" style="width: 100vw-2px; height: 100vh;" autoplay muted playsinline>Not available</video>
+  <canvas id="canvas" style="display:none"></canvas>  
+  <img id="photo" alt="The screen capture will appear in this box."> 
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <hr>
+      <p class="copy">2022 © RetroFiber - <b>
+        <a style="border:none" href="https://github.com/RetroFiber">Github</a>
+        </b>
+      </p>
+    </code>
+  </div>
+</div>
+</body>
+</html>
