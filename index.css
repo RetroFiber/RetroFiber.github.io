@@ -237,3 +237,49 @@ hr{
   text-align: center;
   padding-bottom: 15px;
 }
+iframe {
+  border: 1px dashed #63de00;
+}
+.panel {
+  padding-bottom: 10px;
+}
+
+video {
+  border: 1px dashed #63de00;
+}
+
+.panel {
+  padding-bottom: 10px;
+}
+
+#cam {
+  border: 1px dashed #63de00;
+}
+
+#photo {
+  border: 1px;
+  border-color: black;
+  border-style: dashed;
+}
+input.switch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  box-shadow: inset -1em 0px 0px 0px black;
+  background-color: #63de00;;
+  border: 0;
+  outline: 1px dashed #63de00;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  bottom: -5px;
+}
+
+input.switch:checked {
+  box-shadow: inset 1em 0px 0px 0px black;
+  border: 0;
+}
