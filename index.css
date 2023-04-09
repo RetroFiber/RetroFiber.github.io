@@ -1,12 +1,21 @@
+:root {
+    /*--backgroundcolor: #35b3fa;
+    --color: #63de00;
+    --secondarytextcolor: white;
+    --accentcolor: #9ad9fc;
+    --secondaryaccentcolor: #d1cfcf;
+    --tertiaryaccentcolor: darkgray;*/
+    --primary-font: 'Dosis', sans-serif; 
+}
 body {
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000;
+  background-color: var(--backgroundcolor);
   margin-bottom: 20px;
   padding-bottom: 20px;
-  color: #63de00;
+  color: var(--color);
 }
 
 /* Chrome, Safari, Opera */
@@ -73,8 +82,8 @@ td{
 }
 select{
   background: none;
-  border: 1px dashed #63de00;
-  color: #63de00;
+  border: 1px dashed var(--color);
+  color: var(--color);
   padding: 4px;
   margin: 3px;
 }
@@ -91,15 +100,15 @@ option {
 }
 input{
   background: none;
-  border: 1px dashed #63de00;
-  color: #63de00;
+  border: 1px dashed var(--color);
+  color: var(--color);
   padding: 4px;
   margin: 3px;
 }
 button{
   background: none;
-  border: 1px dashed #63de00;
-  color: #63de00;
+  border: 1px dashed var(--color);
+  color: var(--color);
   padding: 4px;
   margin: 3px;
 }
@@ -107,8 +116,8 @@ button, .btn{
   text-decoration: none;
   padding: 4px 15px;
   background: none;
-  border: 1px dashed #63de00;
-  color: #63de00;
+  border: 1px dashed var(--color);
+  color: var(--color);
   font-weight: 500;
 }
 input:focus, input:hover {
@@ -129,8 +138,8 @@ input:-ms-input-placeholder {
 input::placeholder {
 }
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-  border: 1px dashed #63de00;
-  -webkit-text-fill-color: #63de00;
+  border: 1px dashed var(--color)
+  -webkit-text-fill-color: var(--color);
   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -144,15 +153,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding: 20px;
   height: 100%;
   overflow: none;
-  background-color: #000;
-  color: #63de00;
+  background-color: var(--backgroundcolor);
+  color: var(--color);
 }
 a{
   display: inline-block;
   text-decoration: none;
-  color: #63de00;
+  color: var(--color);
   line-height: 1.5rem;
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
   padding: 0px 8px;
   margin: 3px 0px;
 }
@@ -167,31 +176,31 @@ p {
   line-height: 1rem;
 }
 hr{
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
   border-bottom: none;
 }
 .msg{
   margin-top:20px;
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
   padding-top: 0px;
   padding: 0px 15px;
 }
 .table {
   border-collapse: collapse;
-  border-bottom: 1px dashed #63de00;
+  border-bottom: 1px dashed var(--color);
 }
 .table tr{
-  border-top: 1px dashed #63de00;
-  border-right: 1px dashed #63de00;
+  border-top: 1px dashed var(--color);
+  border-right: 1px dashed var(--color);
 }
 .table th {
   padding: 8px 5px;
   text-transform: uppercase;
-  border-left: 1px dashed #63de00;
+  border-left: 1px dashed var(--color);
 }
 .table td {
   padding: 5px 5px;
-  border-left: 1px dashed #63de00;
+  border-left: 1px dashed var(--color);
 }
 .table td a{
   margin: 0px;
@@ -228,7 +237,7 @@ hr{
   float: right;
 }
 .inline-btn{
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
   margin-bottom: 4px;
   padding: 8px 12px;
   display:inline-block;
@@ -238,14 +247,14 @@ hr{
   padding-bottom: 15px;
 }
 iframe {
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
 }
 .panel {
   padding-bottom: 10px;
 }
 
 video {
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
 }
 
 .panel {
@@ -253,12 +262,12 @@ video {
 }
 
 #cam {
-  border: 1px dashed #63de00;
+  border: 1px dashed var(--color);
 }
 
 #photo {
   border: 1px;
-  border-color: black;
+  border-color: var(--color);
   border-style: dashed;
 }
 input.switch {
@@ -270,9 +279,9 @@ input.switch {
   width: 2em;
   border-radius: 1em;
   box-shadow: inset -1em 0px 0px 0px black;
-  background-color: #63de00;;
+  background-color: var(--color);
   border: 0;
-  outline: 1px dashed #63de00;
+  outline: 1px dashed var(--color);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: relative;
