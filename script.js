@@ -29,6 +29,6 @@ function selectColor() {
         }
 if (!(localStorage.getItem("color"))) { 
   localStorage.setItem("color", "#63de00"); 
-  document.querySelector(':root').style.setProperty("--color", "black");
+  document.querySelector(':root').style.setProperty("--color", "#63de00");
 }
 document.querySelector(':root').style.setProperty("--color", localStorage.getItem('color'));
