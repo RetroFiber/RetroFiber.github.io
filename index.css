@@ -292,3 +292,31 @@ input.switch:checked {
   box-shadow: inset 1em 0px 0px 0px black;
   border: 0;
 }
+#list-items {
+         display: none;
+         position: relative;
+      }
+
+      /* provide css to list items */
+
+#list-items a {
+         display: block;
+         text-decoration: none;
+         padding: 10px;
+         border-top: 1px dashed var(--color);
+         text-align: center;
+      }
+.dropdown {
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+  width: 100vw;
+}
+
+.dropdown a{
+  background: none;
+  border: 0;
+  color: var(--color);
+  padding: 10px;
+  width: 100vw;
+}
