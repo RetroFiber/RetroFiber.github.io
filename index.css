@@ -310,7 +310,6 @@ input.switch:checked {
   background: none;
   border: 1px dashed var(--color);
   color: var(--color);
-  width: 100vw;
 }
 
 .dropdown a{
@@ -318,5 +317,5 @@ input.switch:checked {
   border: 0;
   color: var(--color);
   padding: 10px;
-  width: 100vw;
+  width: 100vw-2px;
 }
