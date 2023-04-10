@@ -1,14 +1,3 @@
-const countEl = document.getElementById('count');
-
-updateVisitCount();
-
-function updateVisitCount() {
-	fetch('https://api.countapi.xyz/update/retrofiber.github.io/?amount=1')
-	.then(res => res.json())
-	.then(res => {
-		countEl.innerHTML = res.value;
-	})
-}
 function selectbgColor() {
          let bgcolor = document.getElementById('bgcolorInput');
          // changing the background color
