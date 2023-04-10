@@ -18,6 +18,10 @@ body {
   color: var(--color);
 }
 
+::-webkit-scrollbar{
+    display: none;
+  }
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes rainbow{
   0%{
