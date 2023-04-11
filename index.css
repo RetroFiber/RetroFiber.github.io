@@ -323,3 +323,30 @@ input.switch:checked {
   padding: 10px;
   width: 100vw-2px;
 }
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: #63de00;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.center {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+
