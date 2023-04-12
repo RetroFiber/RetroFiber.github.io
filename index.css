@@ -60,8 +60,9 @@ body {
 }
 a:focus, a:hover{
   outline: none;
-  border: 1px dashed deepskyblue;
-  color: #fff;
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
 }
 ::selection {
   background-color: rgba(99, 222, 0,0.3);
@@ -93,7 +94,7 @@ select{
 }
 select:focus, select:hover {
   outline: none;
-  border: 1px dashed deepskyblue;
+  border: 1px dashed var(--backgroundcolor);
 }
 optgroup{
   font-weight: 600;
@@ -126,14 +127,14 @@ button, .btn{
 }
 input:focus, input:hover {
   outline: none;
-  border: 1px dashed deepskyblue;
+  background-color: var(--color);
+  border: 1px dashed var(--backgroundcolor);
 }
 button:focus, button:hover, .btn:focus, .btn:hover{
   outline: none;
-  background: deepskyblue;
-  border: 1px dashed deepskyblue;
-  color: #fff;
-  background-color: rgba(99, 222, 0,0.3) 
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
 }
 input::-webkit-input-placeholder {
 }
@@ -170,7 +171,9 @@ a{
   margin: 3px 0px;
 }
 a:hover{
-  background-color: rgba(99, 222, 0,0.3) 
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
 }
 code {
 
@@ -317,12 +320,21 @@ input.switch:checked {
 }
 
 .dropdown a{
-  background: none;
+  display: block;
+  background: var(--backgroundcolor);
   border: 0;
   color: var(--color);
   padding: 10px;
   width: 100vw-2px;
 }
+.dropdown a:hover{
+  background: var(--color);
+  border: 0;
+  color: var(--backgroundcolor);
+  padding: 10px;
+  width: 100vw-2px;
+}
+
 .overlay {
   height: 100%;
   width: 100%;
@@ -349,4 +361,3 @@ input.switch:checked {
   box-sizing: border-box;
   margin: auto;
 }
-
