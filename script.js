@@ -46,3 +46,22 @@ function green_black() {
          localStorage.setItem("bgc", "black");
          document.querySelector(':root').style.setProperty("--backgroundcolor", "black");
         }
+var input = "";
+document.body.addEventListener('keypress',function(ev){
+    input += String.fromCharCode(ev.keyCode);
+    console.log(input);
+    if(input == "back in black"){
+        var audio = new Audio('https://radioteca.net/media/uploads/audios/%25Y_%25m/back%20in%20black-acdc.mp3');
+      audio.play()
+      input = "";
+    }
+    if(input == "mirror"){
+      document.querySelector('body').style.setProperty("-webkit-transform", "matrix(-1,0,0,1,0,0)");
+      input = "";
+    }
+});
+
+// reset input when pressing esc
+document.body.addEventListener('keyup',function(ev){
+    if(ev.keyCode == 49) input = "";
+});
