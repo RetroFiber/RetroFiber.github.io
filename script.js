@@ -56,7 +56,7 @@ document.body.addEventListener('keypress',function(ev){
       input = "";
     }
     if(input == "mirror"){
-      document.querySelector(':root').style.setProperty("transform", "matrix(-1,0,0,1,0,0)");
+      document.querySelector(':root').style.setProperty("--matrix", "scaleX(-1)");
       input = "";
     }
 });
