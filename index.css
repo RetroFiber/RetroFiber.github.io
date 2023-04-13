@@ -336,38 +336,28 @@ input.switch:checked {
 }
 
 .overlay {
-  font-family: font-family: Courier;
-  display: flex;
-  align-items: center; /* vertical centering if flex-direction: row */
-  justify-content: center;
-  height: 1ch;
-  width: calc(50% + 5ch);
-  color: var(--color);
-  background-color: var(--backgroundcolor);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: #63de00;
+  background-color: black;
   overflow-x: hidden;
   transition: 0.5s;
 }
-
-.overlay h1 {
-      margin: auto;
-      hight: 1ch;
-      width: 10ch;
-      text-align: center;
-      justify-content: center;
-			color: var(--color);
-      font-family: monospace;
-      font-weight:bold;
-			font-size: 15vw;
-			overflow: hidden;
-			white-space: nowrap;
-      border-right: .15em solid var(--color); 
-			animation: typing 1.5s steps(10), blink-caret .5s step-end infinite;
-		}
-		@keyframes typing {
-			from {width: 0}
-			to {width: 10ch}
-		}
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: var(--color) }
-    }
+.center {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
