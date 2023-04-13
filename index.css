@@ -5,7 +5,7 @@
     --accentcolor: #9ad9fc;
     --secondaryaccentcolor: #d1cfcf;
     --tertiaryaccentcolor: darkgray;*/
-    transform: matrix(1,0,0,1,0,0);
+    --matrix: scaleX(1);
     --primary-font: 'Dosis', sans-serif; 
 }
 body {
