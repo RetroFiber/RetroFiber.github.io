@@ -383,3 +383,25 @@ input.switch:checked {
   border: 0;
   color: var(--backgroundcolor);
 }
+.easter {
+  cursor: default;
+  backround-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:hover {
+  cursor: default;
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:selection {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:focus {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
