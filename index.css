@@ -5,7 +5,7 @@
     --accentcolor: #9ad9fc;
     --secondaryaccentcolor: #d1cfcf;
     --tertiaryaccentcolor: darkgray;*/
-    --matrix: scaleX(1);
+    transform: matrix(1,0,0,1,0,0);
     --primary-font: 'Dosis', sans-serif; 
 }
 body {
@@ -362,4 +362,24 @@ input.switch:checked {
   right: 0;
   box-sizing: border-box;
   margin: auto;
+}
+.hidden {
+  backround-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:hover {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:selection {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:focus {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
 }
