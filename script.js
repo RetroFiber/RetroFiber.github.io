@@ -48,4 +48,55 @@ function green_black() {
         }
 function mirror() {
       document.querySelector(':root').style.setProperty("transform", "matrix(-1,0,0,1,0,0)");
+};
+if (window.addEventListener) {
+    var keys = [],
+        konami = "38,38,40,40,37,39,37,39,66,65";
+        fix = "70,73,88";
+        acdc = "65,67,68,67";
+        flip = "70,76,73,80";
+        mirror = "77,73,82,82,79,82";
+
+    window.addEventListener("keydown", function(e){
+
+        keys.push(e.keyCode);
+
+        if (keys.toString().indexOf(konami) >= 0) {
+
+            alert('This is where the magic would happen');
+
+            keys = [];
+        };
+        if (keys.toString().indexOf(acdc) >= 0) {
+
+            acdcee();
+
+            keys = [];
+        };
+        if (keys.toString().indexOf(flip) >= 0) {
+
+            document.querySelector(':root').style.setProperty("transform", "matrix(1,0,0,-1,0,0)");
+
+            keys = [];
+        };
+        if (keys.toString().indexOf(mirror) >= 0) {
+
+            document.querySelector(':root').style.setProperty("transform", "matrix(-1,0,0,1,0,0)");
+
+            keys = [];
+        };
+        if (keys.toString().indexOf(fix) >= 0) {
+
+            document.querySelector(':root').style.setProperty("transform", "matrix(1,0,0,1,0,0)");acdceepause();
+
+            keys = [];
+        };
+    }, true);
+};
+var song = new Audio("https://radioteca.net/media/uploads/audios/%25Y_%25m/back%20in%20black-acdc.mp3");
+function acdcee(){
+  song.play();
+}
+function acdceepause(){
+  song.load();
 }
