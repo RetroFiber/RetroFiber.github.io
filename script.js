@@ -56,6 +56,7 @@ if (window.addEventListener) {
         acdc = "65,67,68,67";
         flip = "70,76,73,80";
         mirror = "77,73,82,82,79,82";
+        eagler = "69,65,71,76,69,82";
 
     window.addEventListener("keydown", function(e){
 
@@ -79,6 +80,12 @@ if (window.addEventListener) {
 
             keys = [];
         };
+        if (keys.toString().indexOf(eagler) >= 0) {
+
+            eewindow("https://retrofiber.github.io/Offline_Download_Version.html")
+
+            keys = [];
+        };
         if (keys.toString().indexOf(mirror) >= 0) {
 
             document.querySelector(':root').style.setProperty("transform", "matrix(-1,0,0,1,0,0)");
@@ -99,4 +106,16 @@ function acdcee(){
 }
 function acdceepause(){
   song.load();
+}
+function eewindow(url){
+  win = window.open();
+  win.document.body.style.margin = '0';
+  win.document.body.style.height = '100vh';
+  var iframe = win.document.createElement('iframe');
+  iframe.style.border = 'none';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.margin = '0';
+  iframe.src = url
+  win.document.body.appendChild(iframe)
 }
