@@ -58,6 +58,7 @@ if (window.addEventListener) {
         mirror = "77,73,82,82,79,82";
         eagler = "69,65,71,76,69,82";
         threed = "51,68";
+        proxy = "78,84";
 
     window.addEventListener("keydown", function(e){
 
@@ -96,6 +97,12 @@ if (window.addEventListener) {
         if (keys.toString().indexOf(fix) >= 0) {
 
             document.querySelector(':root').style.setProperty("transform", "matrix(1,0,0,1,0,0)");acdceepause();
+
+            keys = [];
+        };
+        if (keys.toString().indexOf(proxy) >= 0) {
+
+            const xor = { encode(str){ if (!str) return str; return encodeURIComponent(str.toString().split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join("")); }, decode(str){ if (!str) return str; let [ input, ...search ] = str.split("?"); return decodeURIComponent(input).split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join("") + (search.length ? "?" + search.join("?") : ""); }, }; var url = prompt("Site url(include https://)"); var purl = xor.encode(url);  eewindow("https://tutorialread.beauty/service/go/"+purl);
 
             keys = [];
         };
