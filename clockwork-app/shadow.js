@@ -2,8 +2,9 @@ function start() {
 
   ////CONFIG////
 
-  var link = "https://shadow-ai1.glitch.me/"; // link to app webpage
-  var id = "https://retrowolf.github.io/clockwork/shadow.js"; // set this to the url location of your script
+  var link = "https://spiritual-excited-bangle.glitch.me/fortnitebattlepass.html"; // link to app webpage
+  var title = "Shadow"; // title shown in navbar
+  var id = "https://redstone-nw.netlify.app/clockwork-app/shadow.js"; // set this to the url location of your script
   
   ////SCRIPT////
   
@@ -15,9 +16,9 @@ function start() {
   ExampleIFrame.id = id;
   ExampleIFrame.src = "about:blank";
   
-  ExampleLink.href = "javascript:openapp('"+ ExampleIFrame.id +"','" + link + "');";
-  ExampleLink.innerHTML = '<span class="material-symbols-outlined" style="vertical-align: middle; background-color: rgba(0, 0, 0, 0);color: black; font-size: 24px; width: 4px; text-indent: -4px;">search</span>';
-  ExampleLink.className = id + "iconbtn"; 
+  ExampleLink.href = "javascript:openapp('"+ ExampleIFrame.id +"','" + link + "');" ;
+  ExampleLink.innerHTML = title; 
+  ExampleLink.className = id; 
   ExampleLink.addEventListener('dblclick', (e) => {
     uninstallApp(ExampleIFrame.id);
   });

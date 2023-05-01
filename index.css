@@ -1,126 +1,408 @@
-  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+:root {
+    /*--backgroundcolor: #35b3fa;
+    --color: #63de00;
+    --secondarytextcolor: white;
+    --accentcolor: #9ad9fc;
+    --secondaryaccentcolor: #d1cfcf;
+    --tertiaryaccentcolor: darkgray;*/
+    transform: matrix(1,0,0,1,0,0);
+    --primary-font: 'Dosis', sans-serif; 
+}
+body {
+  transform: var(--matrix);
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--backgroundcolor);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: var(--color);
+}
 
-  html {
-    background: black;
-    min-height: 100%;
-  }
+::-webkit-scrollbar{
+    display: none;
+}
 
-  body {
-    height: 100vh;
-    margin: 10px;
-    padding: 10px;
-    color: rgba(128, 255, 128, 0.8);
-    font: 2.25vh Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    text-align: center;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-    }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{
+    color: orange;
   }
-  ::selection {
-    background: #0080FF;
-    text-shadow: none;
+  10%{
+    color: purple;
   }
-  pre {
-    margin: 0;
+  20%{
+    color: red;
   }
+  30%{
+    color: CadetBlue;
+  }
+  40%{
+    color: yellow;
+  }
+  50%{
+    color: coral;
+  }
+  60%{
+    color: green;
+  }
+  70%{
+    color: cyan;
+  }
+  80%{
+    color: DeepPink;
+  }
+  90%{
+    color: DodgerBlue;
+  }
+  100%{
+    color: orange;
+  }
+}
+a:focus, a:hover{
+  outline: none;
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
+}
+::selection {
+  background-color: rgba(99, 222, 0,0.3);
+  color: white;
+}
+* {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+ul,ol{
+  padding-left: 22px;
+}
+td{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+select{
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+  padding: 4px;
+  margin: 3px;
+}
+select:focus, select:hover {
+  outline: none;
+  border: 1px dashed var(--backgroundcolor);
+}
+optgroup{
+  font-weight: 600;
+  background: #000;
+}
+option {
+  background: #000;
+}
+input{
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+  padding: 4px;
+  margin: 3px;
+}
+button{
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+  padding: 4px;
+  margin: 3px;
+}
+button, .btn{
+  text-decoration: none;
+  padding: 4px 15px;
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+  font-weight: 500;
+}
+input:focus, input:hover {
+  outline: none;
+  background-color: var(--color);
+  border: 1px dashed var(--backgroundcolor);
+  color: var(--backgroundcolor);
+}
+button:focus, button:hover, .btn:focus, .btn:hover{
+  outline: none;
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
+}
+input::-webkit-input-placeholder {
+}
+input:-ms-input-placeholder {
+}
+input::placeholder {
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: 1px dashed var(--color)
+  -webkit-text-fill-color: var(--color);
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.console {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.console .consolebody {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  overflow: none;
+  background-color: var(--backgroundcolor);
+  color: var(--color);
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color);
+  line-height: 1.5rem;
+  border: 1px dashed var(--color);
+  padding: 0px 8px;
+  margin: 3px 0px;
+}
+a:hover{
+  background-color: var(--color);
+  color: var(--backgroundcolor);
+  border: 1px dashed var(--backgroundcolor);
+}
+code {
 
-  .terminal {
-    box-sizing: inherit;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+  line-height: 1rem;
+}
+p {
+  line-height: 1rem;
+}
+hr{
+  border: 1px dashed var(--color);
+  border-bottom: none;
+}
+.msg{
+  margin-top:20px;
+  border: 1px dashed var(--color);
+  padding-top: 0px;
+  padding: 0px 15px;
+}
+.table {
+  border-collapse: collapse;
+  border-bottom: 1px dashed var(--color);
+}
+.table tr{
+  border-top: 1px dashed var(--color);
+  border-right: 1px dashed var(--color);
+}
+.table th {
+  padding: 8px 5px;
+  text-transform: uppercase;
+  border-left: 1px dashed var(--color);
+}
+.table td {
+  padding: 5px 5px;
+  border-left: 1px dashed var(--color);
+}
+.table td a{
+  margin: 0px;
+}
+.groupdata{
+  font-weight: 800;
+}
+.rgb {
+  -webkit-animation: rainbow 8s infinite;
+  -ms-animation: rainbow 8s infinite;
+  animation: rainbow 8s infinite;
+}
+.rgb2 {
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  animation: rainbow2 5s ease infinite;
+}
+@keyframes rainbow2 {
+  0%{
+    background-position:0% 50%
   }
-
-  .output {
-    color: rgba(128, 255, 128, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
+  50%{
+    background-position:100% 25%
   }
-  /*
-  .input {
-    color: rgba(192, 255, 192, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
+  100%{
+    background-position:0% 50%
   }
-  .input::before {
-    content: "$ ";
-  }
-  */
-
-  a {
-    color: rgba(128, 255, 128, 0.8);
-    text-decoration: none;
-  }
-
-  a::before {
-    content: "[";
-  }
-
-  a::after {
-    content: "]";
-  }
-  
-  a:hover:before {
-    content: ">>[";
-  }
-
-  a:hover:after {
-    content: "]<<";
-  }
-
-  .errorcode {
-    color: white;
-  }
-  #uv-address {
-      float: right;
-      margin: 10;
-      font: inherit;
-      font-size: 3.75vh;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      color: inherit; 
-      width: 100%;
-  }
-  .rf {
-      color: rgba(128, 255, 128, 0.8);
-      text-decoration: none;
-    }
-
-  .rf::before {
-    content: "";
-  }
-
-  .rf::after {
-    content: "";
-  }
-  
-  .rf:hover:before {
-    content: "> ";
-  }
-
-  .rf:hover:after {
-    content: " <";
-  }
-  p2{
-    float: left;
-  }
-  ::placeholder {
-  color: rgba(128, 255, 128, 0.8);
+}
+.btn-right{
+  font-size: 13px;
+  float: right;
+}
+.inline-btn{
+  border: 1px dashed var(--color);
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  display:inline-block;
+}
+.copy{
   text-align: center;
-  }
-  input:focus::placeholder {
-  color: transparent;
+  padding-bottom: 15px;
+}
+iframe {
+  border: 1px dashed var(--color);
+}
+.panel {
+  padding-bottom: 10px;
+}
+
+video {
+  border: 1px dashed var(--color);
+}
+
+.panel {
+  padding-bottom: 10px;
+}
+
+#cam {
+  border: 1px dashed var(--color);
+}
+
+#photo {
+  border: 1px;
+  border-color: var(--color);
+  border-style: dashed;
+}
+input.switch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  box-shadow: inset -1em 0px 0px 0px black;
+  background-color: var(--color);
+  border: 0;
+  outline: 1px dashed var(--color);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  bottom: -5px;
+}
+
+input.switch:checked {
+  box-shadow: inset 1em 0px 0px 0px black;
+  border: 0;
+}
+#list-items {
+         display: none;
+         position: relative;
+      }
+
+      /* provide css to list items */
+
+#list-items a {
+         display: block;
+         text-decoration: none;
+         padding: 10px;
+         border-top: 1px dashed var(--color);
+         text-align: center;
+      }
+.dropdown {
+  background: none;
+  border: 1px dashed var(--color);
+  color: var(--color);
+}
+
+.dropdown a{
+  display: block;
+  background: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+  padding: 10px;
+  width: 100vw-2px;
+}
+.dropdown a:hover{
+  background: var(--color);
+  border: 0;
+  color: var(--backgroundcolor);
+  padding: 10px;
+  width: 100vw-2px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: #63de00;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.center {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+.hidden {
+  backround-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:hover {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:selection {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.hidden:focus {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--backgroundcolor);
+}
+.easter {
+  cursor: default;
+  backround-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:hover {
+  cursor: default;
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:selection {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
+}
+.easter:focus {
+  background-color: var(--backgroundcolor);
+  border: 0;
+  color: var(--color);
 }

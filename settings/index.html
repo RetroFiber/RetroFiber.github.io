@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html style="color:white">
+  <head>
+    <title>RetroFiber</title>
+    <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+    <link id="maincss" rel="stylesheet" href="https://retrofiber.github.io/index.css">
+    <link rel="icon" type="image/png" href="https://retrofiber.github.io/favicon.png?">
+  </head>
+  <script src="https://retrofiber.github.io/script.js">
+</script>
+  <body>
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+$(document).ready(function() {
+     if($(window).width() >= 950) {
+      $(function() {
+        $("#includeHtml").load("https://retrofiber.github.io/header.html");
+            });
+     } 
+     else {
+       $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/headerm.html");
+      });
+     }
+
+})
+   </script>
+   <div id="includeHtml"></div>
+      <p style="text-align: center;">
+      </p>
+      <h1>RetroFiber</h1>
+      <h3>Settings</h3>
+      <input id = "colorInput" type = "color">
+      <button onclick = "selectColor()"> Change the color </button>
+      <br>
+      <input id = "bgcolorInput" type = "color">
+      <button onclick = "selectbgColor()"> Change the bgcolor   </button>
+      <h3>Themes</h3>
+      <button onclick = "black_white()"> Notepad   </button><br>
+      <button onclick = "white_garnet()"> Linux Terminal   </button><br>
+      <button onclick = "white_black()"> Windows Terminal   </button><br>
+      <button onclick = "green_black()"> Macintosh Terminal   </button>
+
+      <hr>
+      <p class="copy">2022 © RetroFiber - <b>
+        <a style="border:none" href="https://github.com/RetroFiber">Github</a>
+        </b>
+      </p>
+    </code>
+  </div>
+</div>
+  </body>
+</html>

@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html style="color:white">
   <head>
-    <title>404</title>
+    <title>RetroFiber</title>
     <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
-    <link id="maincss" rel="stylesheet" href="/index.css">
-    <link rel="icon" type="image/png" href="/favicon.png?">
+    <link id="maincss" rel="stylesheet" href="https://retrofiber.github.io/index.css">
+    <link rel="icon" type="image/png" href="https://retrofiber.github.io/favicon.png?">
   </head>
+  <script src="https://retrofiber.github.io/script.js">
+</script>
   <body>
-    <div class="noise"></div>
-    <div class="overlay"></div>
-    <div class="terminal">
-      <h1>Error <span class="errorcode">404</span></h1>
-      <p class="output">The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+$(document).ready(function() {
+     if($(window).width() >= 950) {
+      $(function() {
+        $("#includeHtml").load("https://retrofiber.github.io/header.html");
+            });
+     } 
+     else {
+       $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/headerm.html");
+      });
+     }
+
+})
+   </script>
+   <div id="includeHtml"></div>
+      <p style="text-align: center;">
+        
+      </p>
+      <h1>RetroFiber</h1>
+      <h2>Error 404</h2>
+      <p class="output">The page you are looking for may have been removed, changed or may have never existed.</p>
       <p class="output">Please try to <a href="https://retrofiber.github.io">return to the homepage</a>.</p>
       <p class="output">Good luck.</p>
     </div>
-  </body>
+      <hr>
+      <p class="copy">2022 © RetroFiber - <b>
+        <a style="border:none" href="https://github.com/RetroFiber">Github</a>
+        </b>
+      </p>
+    </code>
+  </div>
+</div>
 </html>
