@@ -131,6 +131,7 @@ input:focus, input:hover {
   outline: none;
   background-color: var(--color);
   border: 1px dashed var(--backgroundcolor);
+  color: var(--backgroundcolor);
 }
 button:focus, button:hover, .btn:focus, .btn:hover{
   outline: none;
