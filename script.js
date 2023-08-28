@@ -109,7 +109,7 @@ if (window.addEventListener) {
         };
         if (keys.toString().indexOf(proxy) >= 0) {
 
-            const xor = { encode(str){ if (!str) return str; return encodeURIComponent(str.toString().split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join("")); }, decode(str){ if (!str) return str; let [ input, ...search ] = str.split("?"); return decodeURIComponent(input).split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join("") + (search.length ? "?" + search.join("?") : ""); }, }; var url = prompt("Site url(include https://)"); var purl = xor.encode(url);  eewindow("https://tutorialread.beauty/service/go/"+purl);
+            const xor = { encode(str){ if (!str) return str; return encodeURIComponent(str.toString().split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join("")); }, decode(str){ if (!str) return str; let [ input, ...search ] = str.split("?"); return decodeURIComponent(input).split("").map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char).join("") + (search.length ? "?" + search.join("?") : ""); }, }; var url = prompt("Site url(include https://)"); var purl = xor.encode(url);  eewindow("https://nebulaproxy.io/service/go/"+purl);
 
             keys = [];
         };
