@@ -1,157 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html style="color:white">
+  <head>
+    <title>RetroFiber</title>
+    <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+    <link id="maincss" rel="stylesheet" href="https://retrofiber.github.io/index.css">
+    <link rel="icon" type="image/png" href="https://retrofiber.github.io/favicon.png?">
+  </head>
+  <script src="https://retrofiber.github.io/script.js">
+</script>
+  <body>
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+$(document).ready(function() {
+     if($(window).width() >= 950) {
+      $(function() {
+        $("#includeHtml").load("https://retrofiber.github.io/header.html");
+            });
+     } 
+     else {
+       $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/headerm.html");
+      });
+     }
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-	<title>RetroFiber</title>
-	<meta name="description" content="RetroProx is a minimalistic Ultraviolet frontend." />
-	<link rel="shortcut icon" content="../favicon.ico" />
-	<script src="uv/uv.bundle.js" defer></script>
-	<script src="uv/uv.config.js" defer></script>
-	<script src="register-sw.js" defer></script>
-	<script src="search.js" defer></script>
-	<script src="index.js" defer></script>
-	<link rel="icon" type="image/png" href="../favicon.png?">
-</head>
-<style>
-  @import 'https://fonts.googleapis.com/css?family=Inconsolata';
-
-  html {
-    background: black;
-    min-height: 100%;
-  }
-
-  body {
-    height: 100vh;
-    margin: 10px;
-    padding: 10px;
-    color: rgba(128, 255, 128, 0.8);
-    font: 2.25vh Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    text-align: center;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-    }
-  }
-  ::selection {
-    background: #0080FF;
-    text-shadow: none;
-  }
-  pre {
-    margin: 0;
-  }
-
-  .terminal {
-    box-sizing: inherit;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-
-  .output {
-    color: rgba(128, 255, 128, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
-  }
-  /*
-  .input {
-    color: rgba(192, 255, 192, 0.8);
-    text-shadow:
-        0 0 1px rgba(51, 255, 51, 0.4),
-        0 0 2px rgba(255, 255, 255, 0.8);
-  }
-
-  .input::before {
-    content: "$ ";
-  }
-  */
-
-  a {
-    color: rgba(128, 255, 128, 0.8);
-    text-decoration: none;
-  }
-
-  a::before {
-    content: "[";
-  }
-
-  a::after {
-    content: "]";
-  }
-  
-  a:hover:before {
-    content: ">>[";
-  }
-
-  a:hover:after {
-    content: "]<<";
-  }
-
-  .errorcode {
-    color: white;
-  }
-  #uv-address {
-      float: right;
-      margin: 10;
-      font: inherit;
-      font-size: 3.75vh;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      color: inherit; 
-      width: 100%;
-  }
-  .rf {
-    color: rgba(128, 255, 128, 0.8);
-    text-decoration: none;
-  }
-
-  .rf::before {
-    content: "";
-  }
-
-  .rf::after {
-    content: "";
-  }
-  
-  .rf:hover:before {
-    content: "> ";
-  }
-
-  .rf:hover:after {
-    content: " <";
-  }
-  p2{
-    float: left;
-  }
-  ::placeholder {
-  color: rgba(128, 255, 128, 0.8);
-  text-align: center;
-  }
-  input:focus::placeholder {
-  color: transparent;
-}
-  </style>
-	<body>
-	<div class="terminal">
-	  <h1><a class="rf" href="https://retrofiber.github.io">RetroFiber</a></h1>
-	<p> </p>
-	<div class="center-margin">
-		<p id="uv-error"></p>
-		<pre id="uv-error-code"></pre>
-	</div>
-  <h2>URL:</h2>
+})
+   </script>
+   <div id="includeHtml"></div>
+      <p style="text-align: center;">
+        
+      </p>
+      <h1>RetroFiber</h1>
+      <h2>RetroProx</h2>
+  <h3>URL:</h3>
     <div id="uv-address">
       <input id="uv-address" type="text" placeholder="Ex. https://example.com" style="text-align:center">
       <button id="enter" onclick="getVal()" hidden>Button</button>
@@ -174,11 +58,14 @@
     </div>
 <div class="column">
       <h2><br></h2>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-bkg%60o%7Bggroalo%2Cgktju%60.ko-jmhjn%7B%2F">Roblox</a>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-">Youtube</a>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Cilsvaercm%2Ccmm-">Instagram</a>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-iduln%7B.ao">iFunny</a>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-tuivtgr%2Ccmm">Twitter</a>
-      <p class="output"><a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2F">TikTok</a>
+      <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-bkg%60o%7Bggroalo%2Cgktju%60.ko-jmhjn%7B%2F">Roblox</a> <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-">Youtube</a> <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Cilsvaercm%2Ccmm-">Instagram</a> <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-iduln%7B.ao">iFunny</a> <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-tuivtgr%2Ccmm">Twitter</a> <a href="https://retroprox.onrender.com/uv/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2F">TikTok</a>
+      <hr>
+      <p class="copy">2022 © RetroFiber - <b>
+        <a style="border:none" href="https://github.com/RetroFiber">Github</a>
+        </b>
+      </p>
+    </code>
+  </div>
+</div>
 </body>
 </html> 

@@ -1,0 +1,64 @@
+        <div>
+        <h2>
+        <div style="text-align: center;"><span id="MyClockDisplay" class="extra" onload="showTime()"></span>
+        <script>
+        function showTime(){
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+
+            if(h == 0){
+                h = 12;
+            }
+
+            if(h > 12){
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();
+        </script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><i class="fa fa-eye"></i> <i id="count" style="text-align: center;"></i><br>
+<script>
+const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+	fetch('https://api.countapi.xyz/update/retrofiber.github.io/?amount=1')
+	.then(res => res.json())
+	.then(res => {
+		countEl.innerHTML = res.value - 1184;
+	})
+}
+</script>
+   <a href="https://retrofiber.github.io" >Projects</a> <a href="https://retrofiber.github.io/classicube-maps" >ClassicubeMaps</a> <a href="https://retrofiber.github.io/clockwork" >ClockworkApps</a> <a href="https://retrofiber.github.io/clockwork/themes" >ClockworkThemes</a> <a href="https://retrofiber.github.io/flashgames" >FlashGames</a> <a href="https://retrofiber.github.io/discord" >Discord</a> <a href="https://retrofiber.github.io/RetroTV" >MovieWeb</a> <a href="https://retrofiber.github.io/settings" >Settings</a> <a href="https://retrofiber.github.io/request">Request</a>      </div>
+   </div>
+   <script>
+   document.getElementById("list-items").style.display === "block";
+   function show_hide() {
+      var click = document.getElementById("list-items");
+      if (click.style.display === "none") {
+         click.style.display = "block";
+      } else {
+         click.style.display = "none";
+      }
+   }
+   </script>
+
+        </h2>
+</div>
+      <hr>

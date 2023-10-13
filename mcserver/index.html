@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="color:white">
+  <head>
+    <title>RetroFiber</title>
+    <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+    <link id="maincss" rel="stylesheet" href="https://retrofiber.github.io/index.css">
+    <link rel="icon" type="image/png" href="https://retrofiber.github.io/favicon.png?">
+  </head>
+  <script src="https://retrofiber.github.io/script.js">
+</script>
+  <body>
+  <div class="console">
+  <div class="consolebody">
+    <code>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+$(document).ready(function() {
+     if($(window).width() >= 950) {
+      $(function() {
+        $("#includeHtml").load("https://retrofiber.github.io/header.html");
+            });
+     } 
+     else {
+       $(function() {
+         $("#includeHtml").load("https://retrofiber.github.io/headerm.html");
+      });
+     }
+
+})
+   </script>
+   <div id="includeHtml"></div>
+      <p style="text-align: center;">
+        
+      </p>
+      <h1>RetroFiber</h1>
+      <h2>MC Server</h2>
+      <h3>Fill out info in the popup boxes. Then when done press download. Then unzip the minecraft server zip and find the "server.properties" file in it and replace it with the one you just downloaded.</h3>
+    <div id="uv-address">
+      <p>Server Name (No spaces)<br>
+      <input type="text" placeholder="ServerName" style="text-align:center" id="sn"><br>
+      <p>Gamemode (survival,creative)<br>
+      <input type="text" placeholder="Gamemode" style="text-align:center" id="gm"><br>
+      <p>Force Gamemode (true,false)<br>
+      <input type="text" placeholder="Force Gamemode" style="text-align:center" id="fgm"><br>
+      <p>Difficulty (peaceful,easy,normal,hard)<br>
+      <input type="text" placeholder="Difficulty" style="text-align:center" id="dif"><br>
+      <p>Allow Cheats (true,false)<br>
+      <input type="text" placeholder="Allow Cheats" style="text-align:center" id="cheats"><br>
+      <p>Max Players (minimum:1)<br>
+      <input type="text" placeholder="Max Players" style="text-align:center" id="mp"><br>
+      <p>Online (true,false)<br>
+      <input type="text" placeholder="Online" style="text-align:center" id="online"><br>
+      <button id="enter" onclick="dwnl()">Download</button>
+    </div>
+
+  <script>
+  	function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+
+      element.style.display = 'none';
+      document.body.appendChild(element);
+
+      element.click();
+
+      document.body.removeChild(element);
+    }
+
+    // Start file download.
+    function dwnl() {
+      let sn = document.getElementById('sn').value;
+      let gm = document.getElementById('gm').value;
+      let fgm = document.getElementById('fgm').value;
+      let dif = document.getElementById('dif').value;
+      let cheats = document.getElementById('cheats').value;
+      let mp = document.getElementById('mp').value;
+      let online = document.getElementById('online').value;
+      window.open("https://minecraft.azureedge.net/bin-win/bedrock-server-1.19.81.01.zip")
+//${var}
+      download('mcserver/server.properties',`server-name=${sn}
+gamemode=${gm}
+force-gamemode=${fgm}
+difficulty=${dif}
+allow-cheats=${cheats}
+max-players=${mp}
+online-mode=${online}
+allow-list=false
+server-port=19132
+server-portv6=19133
+enable-lan-visibility=true
+view-distance=32
+tick-distance=8
+player-idle-timeout=0
+max-threads=8
+level-name=lvl1
+level-seed=0
+default-player-permission-level=member
+texturepack-required=false
+content-log-file-enabled=true
+compression-threshold=1
+compression-algorithm=zlib
+server-authoritative-movement=server-auth
+player-movement-score-threshold=20
+player-movement-action-direction-threshold=0.85
+player-movement-distance-threshold=0.3
+player-movement-duration-threshold-in-ms=500
+correct-player-movement=false
+server-authoritative-block-breaking=false
+chat-restriction=None
+disable-player-interaction=false
+client-side-chunk-generation-enabled=true`);
+  }
+      </script>
+      <hr>
+      <p class="copy">2022 © RetroFiber - <b>
+        <a style="border:none" href="https://github.com/RetroFiber">Github</a>
+        </b>
+      </p>
+    </code>
+  </div>
+</div>
+</html>

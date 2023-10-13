@@ -6,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: black !important;
   color: whitesmoke;
   font-family: Roboto, Arial, sans-serif;
 }
@@ -41,6 +41,10 @@ body {
   font-size: 24px;
 }
 
+.navbar .extra {
+  order: 99999;
+}
+
 .navbar a {
   background-color: red;
   color: black;
@@ -70,6 +74,7 @@ body {
   width: 100%;
   height: calc(100vh - 36px);
   border: none;
+  background-color: black;
 }
 
 .iconbtn {
@@ -83,4 +88,5 @@ body {
 
 .confont {
   font-family: Courier, Monospace, monospace;
+  background-color: black !important;
 }
